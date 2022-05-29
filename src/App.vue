@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container_components">
+    <Counter />
+    <Todo />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Counter from "./components/Counter.vue"
+import Todo from "./components/Todo.vue"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Counter, 
+    Todo
   }
 }
 </script>
@@ -22,5 +25,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container_components {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>
